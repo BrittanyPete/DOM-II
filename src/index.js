@@ -6,18 +6,18 @@ const links = document.querySelectorAll('nav a');
 const topImg = document.querySelector('header img');
 const infoHeaders = document.querySelectorAll('.content-section h2');
 const destImg = document.querySelector('.content-destination img');
-const button = document.querySelectorAll('.btn');
+const buttons = document.querySelectorAll('.btn');
 const destinations = document.querySelectorAll('.destination h4');
 
 
 
 logoHeading.addEventListener('pointerover', evt => {
     logoHeading.style.color = 'purple';
-    console.log(`This ${evt} happened`);
+    // console.log(`This ${evt} happened`);
 });
 logoHeading.addEventListener('pointerout', evt => {
     logoHeading.style.color = 'black';
-    console.log(`This ${evt} happened!`);
+    // console.log(`This ${evt} happened!`);
 });
 
 
@@ -39,4 +39,26 @@ infoHeaders.forEach(header =>{
     header.addEventListener('mouseleave', evt => {
         header.style.fontSize = '4rem';
     })
+});
+
+destImg.addEventListener('dblclick', evt => {
+    destImg.style.border = '10px dotted yellow';
+});
+
+
+function getKey(key) {
+   console.log(buttons.textContent += `${key.code}`);
+}
+
+document.addEventListener('keypress', getKey);
+
+
+document.addEventListener('gotpointercapture', evt => {
+    console.log(`I the ${evt.target.textContent} have been captured!`);
+});
+
+destinations.forEach(dest => {
+    dest.addEventListener('pointerdown', evt => {
+        dest.setPointerCapture(evt.pointerId);
+    });
 });
