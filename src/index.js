@@ -6,7 +6,7 @@ const links = document.querySelectorAll('nav a');
 const topImg = document.querySelector('header img');
 const infoHeaders = document.querySelectorAll('.content-section h2');
 const destImg = document.querySelector('.content-destination img');
-const buttons = document.querySelectorAll('.btn');
+const destDiv = document.querySelector('.content-pick div');
 const destinations = document.querySelectorAll('.destination h4');
 
 
@@ -46,15 +46,17 @@ destImg.addEventListener('dblclick', evt => {
 });
 
 
+
 function getKey(key) {
-   console.log(buttons.textContent += `${key.code}`);
+   console.log(`${key.code}`);
 }
 
 document.addEventListener('keypress', getKey);
 
 
+
 document.addEventListener('gotpointercapture', evt => {
-    console.log(`I the ${evt.target.textContent} have been captured!`);
+    console.log(`The ${evt.target.textContent} has been captured!`);
 });
 
 destinations.forEach(dest => {
