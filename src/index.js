@@ -16,7 +16,7 @@ logoHeading.addEventListener('pointerover', evt => {
     // console.log(`This ${evt} happened`);
 });
 logoHeading.addEventListener('pointerout', evt => {
-    logoHeading.style.color = 'black';
+    logoHeading.style.color = '';
     // console.log(`This ${evt} happened!`);
 });
 
@@ -37,7 +37,7 @@ infoHeaders.forEach(header =>{
         header.style.fontSize = '5rem';
 })
     header.addEventListener('mouseleave', evt => {
-        header.style.fontSize = '4rem';
+        header.style.fontSize = '';
     })
 });
 
